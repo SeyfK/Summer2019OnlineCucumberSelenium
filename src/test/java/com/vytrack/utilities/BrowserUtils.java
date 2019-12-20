@@ -8,7 +8,9 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.function.Function;
 
 public class BrowserUtils {
@@ -162,5 +164,18 @@ public class BrowserUtils {
         wait.until(ExpectedConditions.titleIs(pageTitle));
 
     }
+
+
+    public static List<String> getListOfString (List<WebElement> listOfWebElement){
+        List<String> listOfStrings    = new ArrayList<>();
+        for (WebElement element : listOfWebElement){
+            listOfStrings.add(element.getText().trim());
+        }
+        return listOfStrings;
+    }
+
+
+
+
 
 }

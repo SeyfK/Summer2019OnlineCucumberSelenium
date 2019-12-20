@@ -1,5 +1,4 @@
 package com.vytrack.runners;
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -8,12 +7,14 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com/vytrack/step_definitions",
-        dryRun = true,
-        tags = "smoke_test",
-        plugin = {"html:target/default-cucumber-reports"}
-
-
+        dryRun = false,
+        tags = "@smoke_test",
+        plugin = {"html:target/default-cucumber-reports",
+        "json:target/cucumber.json"
+        }
 )
-
 public class CucumberRunner {
+
 }
+
+
