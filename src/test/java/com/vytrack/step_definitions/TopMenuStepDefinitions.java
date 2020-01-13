@@ -1,5 +1,4 @@
 package com.vytrack.step_definitions;
-
 import com.vytrack.pages.LoginPage;
 import io.cucumber.java.en.*;
 
@@ -11,4 +10,5 @@ public class TopMenuStepDefinitions {
     public void user_navigates_to_then_to(String module, String submodule) {
         loginPage.navigateTo(module, submodule);
     }
+
 }
